@@ -6,39 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>2</title>
 		<style>
-			#EventButton {
-				background-color: white;
-				font-family: Arial, Helvetica, sans-serif;
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+			section {
 				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				right: 0;
+				height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 			}
 			button {
-				display: block;
-				margin: auto;
-				height: 35 px;
-				width: 95%;
-				text-shadow: 1px 1px 0.5px #000;
 				border: solid 1px #000;
+                background-color: whitesmoke;
 				font-size: 18px;
-				color: #ccc;
+				color: rgb(105, 114, 231);
 				cursor: pointer;
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
 			}
 		</style>
 	</head>
 	<body>
-		<button id="EventButton">Click Here</button>
+		<section>
+			<button>Change Color</button>
+		</section>
+
 		<script>
-			let button = document.getElementsByTagName("button")[0];
+			let changeButton = document.getElementsByTagName("body")[0];
 
 			function RBC(e) {
-				button.style.backgroundColor =
+				changeButton.style.backgroundColor =
 					"#" + Math.floor(Math.random() * 16777215).toString(16);
 			}
 
-			button.addEventListener("click", RBC);
+			changeButton.addEventListener("click", RBC);
 			window.onload = RBC();
 		</script>
 	</body>
