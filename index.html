@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>2</title>
+		<style>
+			#EventButton {
+				background-color: white;
+				font-family: Arial, Helvetica, sans-serif;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			button {
+				display: block;
+				margin: auto;
+				height: 35 px;
+				width: 95%;
+				text-shadow: 1px 1px 0.5px #000;
+				border: solid 1px #000;
+				font-size: 18px;
+				color: #ccc;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="EventButton">Click Here</button>
+		<script>
+			let button = document.getElementsByTagName("button")[0];
+
+			function RBC(e) {
+				button.style.backgroundColor =
+					"#" + Math.floor(Math.random() * 16777215).toString(16);
+			}
+
+			button.addEventListener("click", RBC);
+			window.onload = RBC();
+		</script>
+	</body>
+</html>
